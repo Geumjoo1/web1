@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body {
+            height: 5000px;
+        }
+
+        .container {
+            position: relative;
+            width: 1000x;
+            border: 1px solid #000;
+            margin: 50px;
+            height: 500px;
+        }
+
+        .box {
+            width: 150px;
+            height: 50px; 
+            text-align: center;  
+            line-height: 50px; 
+            position: absolute;
+        }
+
+        .b1 {
+            background-color: rgb(119, 14, 0);
+        }
+
+        .b2 {
+            background-color: rgb(241, 184, 178);
+            top: 50%;
+            left:50%;
+            /* position: absolute; 속성을 부여한 후 위치를 잡아줌(아무때나 사용x) */
+            transform: translate(-50%,-50%);
+        }
+        
+        .b3 {
+            background-color: rgb(44, 30, 107);
+            right: 0% ;
+            bottom:0%;
+        }
+
+        p {
+            position: absolute;
+        }
+
+        .top_btn {
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: blanchedalmond;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 16px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="top">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque nostrum pariatur sit laudantium voluptates, reprehenderit, qui necessitatibus earum fugiat magni rerum expedita atque alias eius commodi perferendis laborum! Numquam, quisquam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque nostrum pariatur sit laudantium voluptates, reprehenderit, qui necessitatibus earum fugiat magni rerum expedita atque alias eius commodi perferendis laborum! Numquam, quisquam.
+        </p>
+        <div class="box b1">왼쪽 위</div>
+        <div class="box b2">중간</div>
+        <div class="box b3">오른쪽 아래</div>
+    </div>
+
+    <div class="top_btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <g clip-path="url(#clip0_1_12)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2333 13.2333C18.7021 12.7652 19.3375 12.5022 20 12.5022C20.6625 12.5022 21.2979 12.7652 21.7667 13.2333L31.1967 22.66C31.4288 22.8922 31.6129 23.1679 31.7384 23.4713C31.864 23.7746 31.9286 24.0998 31.9285 24.4281C31.9285 24.7564 31.8637 25.0815 31.738 25.3848C31.6123 25.6881 31.4281 25.9637 31.1958 26.1958C30.9636 26.4279 30.6879 26.612 30.3846 26.7376C30.0812 26.8632 29.7561 26.9278 29.4277 26.9277C29.0994 26.9276 28.7743 26.8629 28.471 26.7372C28.1677 26.6114 27.8921 26.4272 27.66 26.195L20 18.5367L12.34 26.1967C12.1095 26.4355 11.8337 26.6261 11.5288 26.7573C11.2238 26.8885 10.8958 26.9576 10.5639 26.9606C10.2319 26.9637 9.90269 26.9006 9.59539 26.775C9.28809 26.6494 9.00888 26.4639 8.77404 26.2293C8.5392 25.9947 8.35343 25.7157 8.22758 25.4085C8.10174 25.1013 8.03833 24.7721 8.04105 24.4402C8.04378 24.1082 8.11259 23.7802 8.24347 23.4751C8.37434 23.17 8.56467 22.8941 8.80333 22.6633L18.2333 13.2333Z" fill="#004EC3"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1_12">
+            <rect width="40" height="40" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+    </div>
+</body>
+</html>
