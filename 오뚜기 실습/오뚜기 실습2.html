@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오뚜기 실습2</title>
+    <style>
+        section {
+            display: flex;
+            width: 1200px;
+            justify-content: center;
+            margin: 0 auto;
+            gap: 16px;
+            height: 400px;
+        }
+
+        article {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            border-radius: 20px;
+            
+        }
+
+
+
+        .content_box1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 32px;
+            box-sizing: border-box;
+            background: url(./오뚜기1.jpg) no-repeat 50% 50%;
+            background-size: contain;
+        }
+
+        .content_box2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 32px;
+            box-sizing: border-box;
+            background: url(./오뚜기2.jpg) no-repeat 50% 50%;
+            background-size: contain;
+            
+        }
+        
+        .content_box3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 32px;
+            box-sizing: border-box;
+            background: url(./오뚜기3.jpg) no-repeat 50% 50%;
+            background-size: contain;
+        }
+
+        .en {
+            color: #fff;
+            line-height: 34px;
+            font-weight: 500;
+            margin-top: 50px;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 50px;
+        }
+
+        p {
+            color:#fff
+        }
+
+     
+
+
+    </style>
+</head>
+<body>
+   <section>
+        <article>
+            <div class="content_box1">
+                <div class="en">Environmental</div>
+                <strong class="title">환경</strong>
+                <p>자연과 함께 맛으로 행복한 세상을 만들기 위한 의미 있는 걸음을 내딛습니다.</p>
+            </div>
+        </article>
+        <article>
+            <div class="content_box2">
+                <div class="en">Social</div>
+                <strong class="title">사회</strong>
+                <p>기업활동에 반하는 어떠한 행위도 허용하지 않으며, 깨끗하고 정직한 기업문화를 만들어갑니다.</p>
+            </div>
+        </article>
+        <article>
+            <div class="content_box3">
+                <div class="en">Governance</div>
+                <strong class="title">지배구조</strong>
+                <p>모든 이해관계자의 권익을 증진하는 건전한 지배구조의 기업으로 도약하고자 합니다.</p>
+            </div>
+        </article>
+       
+       
+    </section>
+</html>
