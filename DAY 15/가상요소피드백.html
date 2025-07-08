@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소피드백</title>
+    <style>
+        body {
+            background: rgb(88, 73, 101);
+        }
+
+        .menu_hover_effect > ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu_hover_effect > ul > li {
+            margin: 16px;
+        }
+
+        .menu_hover_effect a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .menu_hover_effect a::before {
+            content: "";  
+            /* content 꼭 써야함 비포 에프터 다 */
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            /* color를 쓰는게 아니라 background-color를 써야함 */
+            height: 1px;
+            transition: 0.5s;
+        }
+        
+        .menu_hover_effect a::after {
+            content: "";  
+            /* content 꼭 써야함 비포 에프터 다 */
+            width: 1px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            height: 0%;
+            transition: 0.5s;
+        }
+
+        .menu_hover_effect a:hover::before {
+            top: 100%;
+        }
+
+        .menu_hover_effect a:hover::after {
+            height: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+     <nav class="menu_hover_effect">
+        <ul class>
+            <li><a href="#">about</a></li>
+            <li><a href="#">content</a></li>
+            <li><a href="#">service</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

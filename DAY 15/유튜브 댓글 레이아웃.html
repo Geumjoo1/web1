@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 댓글 레이아웃</title>
+    <script src="https://kit.fontawesome.com/46ebd75e55.js" crossorigin="anonymous">
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .comment_container {
+            display: flex;
+            width: 1200px;
+            justify-content: space-between;
+        }
+
+        figure > img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .basis{
+            flex-basis: 90%;
+        }
+
+        h2,
+        .comment_content {
+            font-size: 14px;
+        }
+
+        .icon_box {
+            display: flex;
+            margin: 16px 0;
+            align-items: center;
+        }
+
+        .icon_box > div:nth-child(1),
+        .icon_box > div:nth-child(2),
+        .icon_box > figure {
+            margin-right: 16px;
+        }
+
+        button {
+            background: none;
+            border: none;
+        }
+
+        .icon_box > figure > img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .icon_box > p {
+            font-size: 12px;
+            padding: 8px 10px;
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+
+        .icon_box > p:hover {
+            background: #777777;
+            color: #fff;
+        }
+
+        .recomment_box > button {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <article class="comment_container">
+        <figure>
+            <img src="./유튜브 프로필.jpg" alt="">
+        </figure>
+
+        <div class="basis">
+            <h2>@nickname</h2>
+            <p class="comment_content">정말 이런 플레이리스트가 필요했어! 원래 월요일은 힘든데, 이 음악들이 도와주네! 이런 음악이 있으면 하루를 즐겁게 시작할 수 있어서 내 월요일이 더 좋아졌어! 다음번에도 이런 리스트 만들어줘!
+            </p>
+
+            <div class="icon_box">
+                <div>
+                    <button>
+                        <!-- 좋아요 아이콘 들어가야함 -->
+                         <i class="fa-solid fa-thumbs-up fa-xl"></i>
+                    </button>
+                    <span>4</span>
+                </div>
+                
+                <!-- 싫어요 박스 -->
+                <div>
+                    <button>
+                        <!-- 좋아요 아이콘 들어가야함 -->
+                         <i class="fa-solid fa-thumbs-down fa-xl"></i>
+                    </button>
+                </div>
+                
+                <figure>
+                    <img src="./유튜브 프로필.jpg" alt="">
+                </figure>
+
+                <p>답글</p>
+
+            </div>
+
+            <div class="recomment_box">
+                <button>
+                    <!-- 아래꺽쇄 아이콘 들어갈거임 -->
+                    <i class="fa-solid fa-chevron-down fa-xl"></i>
+                    <span>
+                    답글1개
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <button>
+                <!-- 엘립스버티컬 아이콘 -->
+             <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
+            </button>
+        </div>
+    </article>
+</body>
+</html>
