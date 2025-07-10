@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소3 실습/피드백</title>
+</head>
+<style>
+    body {
+        background-color: rgb(37, 145, 145);
+    }
+
+    ul {
+        display: flex;
+        list-style: none
+    }
+
+    li > a {
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;
+        width: 200px;
+        height: 150px;
+        display: inline-block;
+        text-align: center;
+        margin: 24px;
+    }
+
+    span {
+        display: block;
+    }
+
+    a span:first-child {
+        font-size: 26px;
+        /* opacity: 0;
+        transition: 0.5s; */
+    }
+
+    a span:last-child {
+        color: rgb(31, 31, 106);
+        font-size: 18px;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    a:hover span:last-child {
+        opacity: 1;
+        transform: translateY(25px);
+    }
+
+    a span:last-child::after {
+        content: "";
+        width: 100%;
+        background-color: #fff;
+        height: 1px;
+        display: block;
+        margin-top: 30px;
+    }
+
+    /* a:hover span:first-child {
+        opacity: 1;
+        transform: translateX(25px);
+    } */
+
+    /* a span:first-child::before {
+        content: "";
+        width: 100%;
+        background-color: #fff;
+        height: 2px;
+        display: block;
+        margin-top: 30px;
+    } */
+
+    a::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        display: block;
+        margin-bottom: 16px;
+        opacity: 0.5;
+        transition: 0.3s;
+    }
+
+    a:hover::before {
+        height: 5px;
+        opacity: 1;
+    }
+</style>
+<body>
+    <ul>
+        <li>
+            <a href="#">
+                <span>HTML</span>
+                <span>mark up</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>CSS</span>
+                <span>style</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>JAVA</span>
+                <span>coding</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" >
+                <span>UXUI</span>
+                <span>design</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>PORTFOLIO</span>
+                <span>contact</span>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
